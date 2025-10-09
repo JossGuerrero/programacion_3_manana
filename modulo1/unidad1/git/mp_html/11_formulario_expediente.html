@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Comentarios - Transporte de Quito</title>
+</head>
+<body>
+
+    <h1>Formulario de Sugerencias sobre el Transporte Público de Quito </h1>
+    <p>Ayúdanos a mejorar el **Sistema Integrado de Transporte Metropolitano (SITM-Q)** con tus comentarios.</p>
+
+    <form action="procesar.php" method="post">
+        <table border="1">
+            
+            <tr>
+                <th>
+                    <label for="nombre">Nombre (Opcional):</label>
+                    <input type="text" id="nombre" name="nombre">
+                </th>
+                <th>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </th>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="fecha_viaje">Fecha del Viaje o Suceso:</label>
+                    <input type="date" id="fecha_viaje" name="fecha_viaje" value="2025-10-08">
+                </td>
+                <td>
+                    <label for="transporte_tipo">Tipo de Transporte:</label>
+                    <select id="transporte_tipo" name="transporte_tipo" required>
+                        <option value="">Seleccione...</option>
+                        <option value="metro">Metro de Quito </option>
+                        <option value="trolebus">Trolebús</option>
+                        <option value="ecovia">Ecovía</option>
+                        <option value="bus_convencional">Bus Urbano Convencional</option>
+                        <option value="otro">Otro (Corredor Sur, etc.)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="calificacion_servicio">Calificación General del Servicio:</label>
+                    <input type="radio" id="malo" name="calificacion_servicio" value="malo" required><label for="malo">Malo</label>
+                    <input type="radio" id="regular" name="calificacion_servicio" value="regular"><label for="regular">Regular</label>
+                    <input type="radio" id="excelente" name="calificacion_servicio" value="excelente"><label for="excelente">Excelente</label>
+                </td>
+                <td>
+                    <label for="zona">Zona de la Sugerencia:</label>
+                    <select id="zona" name="zona" required>
+                        <option value="">Seleccione...</option>
+                        <option value="norte">Norte (El Labrador, Río Coca, Carcelén)</option>
+                        <option value="centro">Centro (La Marín, El Ejido, San Francisco)</option>
+                        <option value="sur">Sur (Quitumbe, Terminal Quitumbe, Solanda)</option>
+                        <option value="valles">Valles (Cumbayá, Tumbaco, Los Chillos)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="comentarios">Comentarios / Sugerencia (detalles sobre la experiencia):</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="acepto" name="acepto_publicacion" required>
+                    <label for="acepto">Acepto que mi comentario pueda ser revisado por la Empresa de Pasajeros de Quito (requisito).</label>
+                </td>
+            </tr>
+
+        </table>
+        
+        <p>
+            <input type="submit" value="Enviar Sugerencia">
+            <input type="reset" value="Limpiar Formulario">
+        </p>
+    </form>
+
+</body>
+</html>
