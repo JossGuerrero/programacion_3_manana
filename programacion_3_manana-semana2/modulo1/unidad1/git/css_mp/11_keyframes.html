@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes - Indicador de Tren Metro</title>
+    
+    <style>
+        @keyframes mover {
+            0% {
+                transform: translateX(0);
+                background-color: #03a9f4;
+            }
+            50% {
+                transform: translateX(300px);
+                background-color: #00bcd4;
+            }
+            100% {
+                transform: translateX(0);
+                background-color: #03a9f4;
+            }
+        }
+
+        .caja {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: mover 4s infinite ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="11_keyframes.css">
+</head>
+<body>
+    
+    <h1>Estado del Tren del Metro de Quito</h1>
+    <p style="margin-left: 20px;">(simulando un trayecto).</p>
+
+    <div class="caja">Tren en Ruta</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifas y Flota del Transporte de Quito con CSS</title>
+    
+    <style>
+       
+        h1 {
+            color: red; 
+            background-color: yellow;
+            text-align: center;
+        }
+        .subtitulo {
+            color: green;
+            background-color: lightgray;
+            text-align: center;
+            padding: 5px; 
+        }
+        a {
+            color: blue;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <link rel="stylesheet" href="01_metodos.css"> 
+</head>
+<body>
+    
+    <h1>Tarifas y Flota del Sistema Integrado de Transporte (SITM-Q) </h1>
+    
+    <h2 class="subtitulo">Detalle de Costos y Capacidad por Unidad</h2>
+
+    <table>
+        <tr>
+            <th>Sistema / Modalidad</th>
+            <th>Tipo de Unidad</th>
+            <th>Tarifa Regular</th>
+            <th>Capacidad (Aprox.)</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Corredores Troncales (BRT)</td>
+            <td>Trolebús (Biarticulado)</td>
+            <td rowspan="2">USD $0.35</td>
+            <td>250 personas</td>
+        </tr>
+        <tr>
+            <td>Ecovía (Articulado)</td>
+            <td>160 personas</td>
+        </tr>
+        <tr>
+            <td>Metro de Quito</td>
+            <td>Tren / Vagón</td>
+            <td>USD $0.45</td>
+            <td>1,500 personas por tren</td>
+        </tr>
+        <tr>
+            <td>Tarifa Integrada</td>
+            <td colspan="2">Permite trasbordo entre Metro, Trole y Ecovía</td>
+            <td>**USD $0.60**</td>
+        </tr>
+        <tr>
+            <td>Bus Urbano Convencional</td>
+            <td>Unidad Estándar</td>
+            <td>USD $0.35</td>
+            <td>60 - 80 personas</td>
+        </tr>
+    </table>
+
+    <p class="subtitulo">Ejemplo estilo con clase (Nota: Este párrafo usa la clase .subtitulo)</p>
+
+
+
+</body>
+</html>

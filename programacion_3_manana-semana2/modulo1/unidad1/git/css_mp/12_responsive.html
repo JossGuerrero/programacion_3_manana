@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Responsive - SITM-Q</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #03a9f4;
+            color: #fff;
+            padding: 10px;
+            height: 100vh;
+        }
+        .menu div {
+            background-color: #031f99;
+            margin: 10px;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            font-size: 1.5em;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        @media (min-width: 600px) {
+            .menu {
+                flex-direction: row;
+                height: auto;
+                justify-content: space-around;
+                padding: 15px;
+            }
+            .menu div {
+                width: auto;
+                margin: 0 10px;
+                padding: 15px 25px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .menu {
+                justify-content: space-between;
+                padding: 20px 80px;
+            }
+            .menu div {
+                font-size: 2em;
+                margin: 0 20px;
+                padding: 30px 40px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="12_responsive.css">
+</head>
+<body>
+    
+    <h1 style="text-align: center; margin-bottom: 0;">Menú Responsive SITM-Q</h1>
+    
+    <div class="menu">
+        <div class="caja">Inicio</div>
+        <div class="caja">Rutas Metro</div>
+        <div class="caja">Tarifas</div>
+        <div class="caja">Contacto</div>
+    </div>
+    
+   
+</body>
+</html>

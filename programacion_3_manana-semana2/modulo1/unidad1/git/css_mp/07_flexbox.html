@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Estación de Metro Quito</title>
+    
+    <style>
+        .contenedor {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 2px solid #031f99;
+            padding: 10px;
+            gap: 10px;
+            background-color: lightgray;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            font-family: Arial, sans-serif;
+        }
+
+        .item {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            border: 2px solid darkred;
+            flex: 1 1 100px;
+            text-align: center;
+        }
+
+        .item_especial {
+            align-self: flex-start;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            border: 2px solid darkred;
+            flex: 1 1 100px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="07_flexbox.css">
+</head>
+<body>
+    
+    <h1>Diseño de Servicios en Estación del Metro (Flexbox)</h1>
+   
+    
+    <div class="contenedor">
+        <div class="item">Boletería</div>
+        <div class="item">Máquinas de Recarga</div>
+        <div class="item_especial">Salida de Emergencia</div>
+        <div class="item">Acceso a Plataforma Norte</div>
+        <div class="item">Información al Usuario</div>
+    </div>
+
+</body>
+</html>

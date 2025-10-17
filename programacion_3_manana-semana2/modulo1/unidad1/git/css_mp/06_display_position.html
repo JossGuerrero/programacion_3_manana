@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position CSS - Transporte de Quito</title>
+    
+    <style>
+        body {
+            height: 1500px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .estatico {
+            position: static; 
+            background-color: #ff9999;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid red;
+        }
+        .relativo {
+            position: relative;
+            background-color: #99ff99;
+            padding: 10px;
+            margin: 20px;
+            top: 50px;
+            left: 50px;
+            border: 1px solid green;
+            z-index: 10;
+        }
+        .fijo {
+            position: fixed;
+            background-color: #03a9f4;
+            color: white;
+            padding: 15px;
+            bottom: 50px;
+            right: 50px;
+            z-index: 100;
+            text-shadow: 1px 1px 2px #000;
+        }
+        h1, p {
+            margin-left: 20px;
+        }
+        .contenido {
+            margin-top: 100px;
+            padding: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="06_display_position.css">
+</head>
+<body>
+    
+    <h1>Demostración de Posicionamiento CSS - Metro de Quito</h1>
+    <p>Desplácese hacia abajo para ver cómo el elemento "Fijo" se mantiene en su sitio.</p>
+
+    <div class="estatico">
+        **Posición: ESTÁTICO**
+        <br>
+        Información de Estación (Metro). Comportamiento por defecto.
+    </div>
+
+    <div class="relativo">
+        **Posición: RELATIVO**
+        <br>
+        Ubicación de un vagón en el mapa.
+    </div>
+
+    <div class="contenido">
+        <h2>Contenido Principal de la Página</h2>
+        <p>Aquí va el mapa de rutas, noticias y horarios del SITM-Q. </p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p>Fin del contenido.</p>
+    </div>
+
+    <div class="fijo">
+        **Posición: FIJO**
+        <br>
+        <p style="margin: 0; font-size: 14px;">Botón de Ayuda / Chat. Siempre visible.</p>
+    </div>
+
+</body>
+</html>
