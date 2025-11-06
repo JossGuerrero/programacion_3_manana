@@ -1,0 +1,59 @@
+<DOCTYPE html>
+    <head>
+    </head>
+    <body>
+        <P>Formulario completo reserva de vuelos</p>
+        <form action="procesar.php" method="post">
+            <table border="0" >
+                <tr>
+                    <th><label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </th>
+                    <th><label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </th>
+                    <th><label for="correo">Correo Electronico</label>
+                        <input type="email" id="correo" name="correo">
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" name="fecha">
+                    </th>
+    
+                    <td>
+                        <label for="genero">Genero</label>
+                        <input type="radio" id="m" name="genero" value="M"><label for="m">Masculino</label>
+                        <input type="radio" id="f" name="genero" value="M"><label for="m">Femenino</label>
+                    </td>
+                    <td>
+                        <label for="pais">Pais</label>
+                        <select id="pais" name="pais">
+                            <option value="">Seleccione...</option>
+                            <option value="ec">Ecuador</option>
+                            <option value="mx">Mexico</option>
+                            <option value="ve">Venezuela</option>
+                            <option value="co">Colombia</option>
+                            <option value="pe">Peru</option>
+                            <option value="ar">Argentina</option>
+                            <option value="ch">Chile</option>
+                    </td>
+                    <td>
+                        <label for="comentarios">Comentarios sobre nuestras reservas</label>
+                        <textarea id="comentarios" name="comnetarios" rows="5"></textarea>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="acepto" name="acepto" required>
+                        <label for="acepto">Acepto los terminos y condiciones</label>
+                    </td>
+                    <th><label for="color">Color favorito</label>
+                        <input type="color" id="color" name="color">
+                        </th>
+                </tr>
+            </table>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+    
+        </form>
+    </body>
+    </html>
