@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>Ejemplo de Formulario Simple de Generacion de Ticket</p>
+        <form action="procesar.php" method="post">
+             <table border="0">
+                <tr bgcolor="A62323">
+                    <th>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </th>
+                    <th>
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="fecha">Fecha de Registro</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </th>
+                    <th>
+                        <label for="color">Color favorito</label>
+                        <input type="color" id="color" name="color">
+                    </th>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="genero">Genero</label>
+                        <input type="radio" id="m" name="genero" value="M"><label for="m">Masculino</label>
+                        <input type="radio" id="f" name="genero" value="F"><label for="m">Femenino</label>
+                    </td>
+                    <td>
+                        <label for="pais">Pais</label>
+                        <select id="pais"name="pais">
+                            <option value="">Seleccione ...</option>
+                            <option value="">Ecuador</option>
+                            <option value="">Mexico</option>
+                            <option value="">Venezuela</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="acepto" name="acepto" requied>
+                        <label for="acepto">Acepto  los terminos y condiciones </label>
+                    </td>
+                </tr>
+
+            </table>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+
+    </body>
+
+</html>

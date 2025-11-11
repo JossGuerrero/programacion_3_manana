@@ -1,0 +1,25 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid #4761D7;
+    padding: 10px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    background-color: aqua;
+    padding: 20px;
+    border: 2px solid #4761D7;
+    flex: 1 1 100px;
+    text-align: center;
+}
+.item_especial{
+    align-self: flex-start;
+    background-color: yellow;
+    padding: 20px;
+    border: 2px solid #4761D7;
+    flex: 1 1 150px;
+    text-align: center;
+}
