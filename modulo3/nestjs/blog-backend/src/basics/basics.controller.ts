@@ -1,50 +1,44 @@
-import { Injectable } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { BasicsService } from './basics.service';
 
-@Injectable()
-export class BasicsService {
+@Controller('basics')
+export class BasicsController {
+    constructor(private readonly basicsService: BasicsService){}
 
-    getMyFirstGet(): object {
-        return {
-            service: 'Blog-Backend',
-            controller: '/basics',
-            function: 'Get Example'
-        };
+      @Get()
+      getMyFirstGet(): object {
+        return this.basicsService.getMyFirstGet();
       }
 
-      getConParametros(parametro: string): object {
-        return {
-            service: 'Blog-Backend',
-            controller: '/basics/:parametro',
-            function: 'Get con Parametros',
-            parametroRecibido: parametro
-        };
+      @Get(':parametro')
+      getConParametros(@Param('parametro') parametro: string){
+        return this.basicsService.getConParametros(parametro); 
+      }
+      @Post()
+      create(@Body() bodyPost:object){
+        return this.basicsService.postFunction(bodyPost);
       }
 
-      postFunction(bodyPost: object): object {
-        return {
-            service: 'Blog-Backend',
-            controller: '/basics tipo post',
-            function: 'Ejemplo de petición Post',
-            bodyRecibido: bodyPost
-        };
+      @Put(':id')
+      update(@Param('id') id: string, @Body() bodyPost: object) {
+          return this.basicsService.putFunction(bodyPost, id);
       }
 
-      putFunction(bodyPost: object, parametro: string): object {
-        return {
-            service: 'Blog-Backend',
-            controller: '/basics tipo put',
-            function: 'Ejemplo de petición Put',
-            bodyRecibido: bodyPost,
-            parametro: parametro
-        };
-      }
-      deleteFunction(parametro: string): object {
-        return {
-            service: 'Blog-Backend',
-            controller: '/basics tipo delete',
-            function: 'Ejemplo de petición Delete',
-            parametro: parametro
-        };
+      @Delete(':id')
+      delete(@Param('id') id: string) {
+          return this.basicsService.deleteFunction(id);
       }
 
+      @Post('calculo-area-triangulo')
+      calculoTriangulo(@Body() bodyPost:object){
+        return this.basicsService.calculoTriangulo(bodyPost);
+      }
+
+      @Get('Calculo-area-rectangulo/:ancho/:alto')
+      arearRectangulo(
+        @Param('ancho')ancho: number,
+        @Param('alto')alto: number,
+      ){
+        return this.basicsService.areaRectangulo(ancho, alto);
+      }
 }
