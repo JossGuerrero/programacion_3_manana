@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Estaciones SITM-Q</title>
+</head>
+<body>
+
+  <h1>Gestor de Estaciones del Metro</h1>
+
+  <form id="formulario">
+    <input type="text" id="nombre" placeholder="Nombre Estación" required>
+    <input type="text" id="linea" placeholder="Línea / Sector" required>
+    <input type="number" id="tarifa" placeholder="Tarifa ($)" required step="0.01">
+    <button type="submit">Agregar Estación</button>
+  </form>
+
+  <section id="contenedorEstaciones"></section>
+
+  <script src="08_ventas.js"></script>
+</body>
+</html>

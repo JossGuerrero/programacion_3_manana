@@ -1,21 +1,24 @@
-class Car{
-    constructor(brand,model){
-        this.brand = brand;
-        this.model = model;
-    }   
-
-    start(){
-        console.log(${this.brand} ${this.model} esta encendido)
-    } 
-    run(){
-        console.log(${this.brand} ${this.model} esta en movimiento)
+class MetroTren {
+    constructor(numeroSerie, ruta) {
+        this.numeroSerie = numeroSerie;
+        this.ruta = ruta;
     }
-    stop(){
-        console.log(${this.brand} ${this.model} se ha detenido)
+
+    abrirPuertas() {
+        console.log(`Tren ${this.numeroSerie} en ruta ${this.ruta}: Puertas abiertas.`);
+    }
+
+    iniciarMarcha() {
+        console.log(`Tren ${this.numeroSerie}: Iniciando marcha hacia la siguiente estación.`);
+    }
+
+    llegarEstacion() {
+        console.log(`Tren ${this.numeroSerie}: Ha llegado a la estación y se ha detenido.`);
     }
 }
 
-const miCarro = new Car("Toyota","Corolla");
-miCarro.start();
-miCarro.run();
-miCarro.stop()
+const trenLinea1 = new MetroTren("T-001", "Quitumbe - El Labrador");
+
+trenLinea1.abrirPuertas();
+trenLinea1.iniciarMarcha();
+trenLinea1.llegarEstacion();

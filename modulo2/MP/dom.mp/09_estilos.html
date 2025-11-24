@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control de Alertas SITM-Q</title>
+  <style>
+    #alerta {
+      background-color: #031f99;
+      color: white;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Control de Alertas Operativas</h1>
+
+  <div id="alerta" style="width: 150px; height: 50px;">
+    SERVICIO NORMAL
+  </div>
+
+  <div style="margin-top:20px;">
+    <button onclick="cambiarEstado()">
+       Cambiar Color / Estado
+    </button>
+    <button onclick="aumentarImpacto()">⬆ Aumentar Impacto</button>
+    <button onclick="reiniciar()"> Reiniciar Alerta</button>
+  </div>
+
+  <script src="09_estilos.js"></script>
+</body>
+</html>

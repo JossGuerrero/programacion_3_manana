@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="04_eventos.js" defer></script>
+</head>
+<body>
+    
+    <h3>Gestión de Viajes SITM-Q</h3>
+
+    <div id="contenedor"></div>
+    
+    <button id="crear">Generar Ticket</button>
+    <button id="eliminar">Borrar Ticket</button>
+
+    <br><br>
+
+    <button onclick="alert('Estado del Sistema: OPERATIVO')"> 
+        Consultar Estado
+    </button>
+
+    <button onclick="consultarSaldo()"> 
+        Ver Saldo Tarjeta
+    </button>
+
+    <p id="parrafo" style="border: 1px solid black; padding: 10px; width: 200px;">
+        Doble Click para Validar Acceso
+    </p>
+
+    <form id="formulario" style="margin-top: 20px;">
+        <input type="text" id="nombre" placeholder="Buscar Estación..."/>
+        <button type="submit">Buscar</button>
+    </form>
+    
+</body>
+</html>
