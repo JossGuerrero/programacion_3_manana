@@ -1,11 +1,11 @@
 
-import AreaTriangulo from './props/Areatriaangulo.tsx';
+import FetchUser from './components/useEffect/FetchUser';
 
 function App() {
   return  (
   <>
     
-      <AreaTriangulo />
+      <FetchUser />
   </>  
   );
 }
